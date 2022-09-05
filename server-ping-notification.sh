@@ -20,7 +20,7 @@ resetAlert() {
 sendAlert() {
 	echo "Sending alert to user...";
 	# notify-send "[192.168.1.12] PiHole Server Unreachable...";
-	cat ./alertTemplate.txt  | mail -s "[ALERT] Server 192.168.1.12/24 (pi.hole/) not responding..." email@domain.com
+	cat ./alertTemplate.txt  | mail -s "[ALERT] Server 192.168.1.12/24 (pi.hole/) not responding..." email@domain.com;
 	echo "1" > ./alertSent.tmp;
 }
 
@@ -33,7 +33,8 @@ createAlert() {
 		fi
 	fi
 
-	(( failedDataPoints++ ))
+	(( failedDataPoints++ ));
+	printf "Server Failed %s Data Points", $failedDataPoints;
 }
 
 while true; do
@@ -45,5 +46,5 @@ while true; do
 		createAlert;
 	fi
 
-	sleep 30;
+	sleep 3;
 done
