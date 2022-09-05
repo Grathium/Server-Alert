@@ -1,0 +1,7 @@
+[HTTP INSTANCE WARNING]
+tag = pi.hole/
+ip = 192.168.1.12/24
+alert = HTTP Erorr: 504 Gateway Timeout
+
+[DESCRIPTION]
+Failed 4 consecutive data points...
