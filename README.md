@@ -17,4 +17,4 @@ This defines how many times a ping has to fail to give an alert.
 Change the number on line 30 to the number of failed data points.  
   
 **Changing Server Address**  
-Change _ping -c 1 xxx.xxx.xxx.xxx_ to your server address / IP address  
+Change _ping -c 1 xxx.xxx.xxx.xxx_ on line 8 to your server address / IP address  
